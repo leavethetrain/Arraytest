@@ -6,6 +6,7 @@ function inputValue() {
 
   document.getElementById("input").value = "";
   showArray();
+  document.getElementById("result").innerHTML = array;
 }
 
 function deleteContent() {
@@ -17,6 +18,7 @@ function deleteContent() {
 
   document.getElementById("deleteContent").value = "";
   showArray();
+  document.getElementById("result").innerHTML = newListe;
 }
 
 /*function deleteContent() {
@@ -41,8 +43,11 @@ function deleteByPosition() {
   const position = document.getElementById("deleteId").value;
   if (position < array.length) {
     array.splice(position, 1);
+    document.getElementById("result").innerHTML = array;
   } else {
     console.log("Die Position muss kleiner als " + array.length + " sein");
+    document.getElementById("result").innerHTML =
+      "Die Position muss kleiner als " + array.length + " sein.";
   }
   document.getElementById("deleteId").value = "";
   showArray();
@@ -55,6 +60,7 @@ function multiplyArray() {
 
   array = multiplyArray;
   showArray();
+  document.getElementById("result").innerHTML = multiplyArray;
 }
 
 function sumArray() {
@@ -63,6 +69,7 @@ function sumArray() {
     return previousValue + currentValue;
   });
   console.log(sumArray);
+  document.getElementById("result").innerHTML = sumArray;
 }
 
 function showArray() {
@@ -70,4 +77,8 @@ function showArray() {
   array.forEach((element) => {
     console.log(element);
   });
+}
+
+function reset() {
+  window.location.reload();
 }

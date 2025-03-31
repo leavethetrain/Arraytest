@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <span>Inhalt einfügen:</span>
+    <input type="number" id="input" />
+    <button onclick="inputValue()" id="inputButton">Einfügen</button><br />
+    <span>ID-löschen:</span><input type="text" id="deleteId" />
+    <button onclick="deleteByPosition()" id="deleteButton">Löschen</button
+    ><br />
+
+    <span>Content löschen:</span><input type="text" id="deleteContent" />
+    <button onclick="deleteContent()">Löschen</button><br />
+
+    <button id="show" onclick="showArray()">Anzeigen</button><br />
+    <button id="multiply" onclick="multiplyArray()">Multiplizieren</button
+    ><br />
+    <button id="sum" onclick="sumArray()">Summe</button>
+  </body>
+</html>
